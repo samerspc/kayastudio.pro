@@ -1,0 +1,46 @@
+name: CI/CD React WebSite
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'    # или ваша версия
+
+      - name: Install & Build
+        run: |
+          npm i
+          npm audit fix --force
+          npm run build
+
+      - name: Copy build to server
+        uses: appleboy/scp-action@v0.1.8
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}     
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          source: "dist/"                      
+          target: "/var/www/kayastudio.pro/html/"
+
+      - name: Reload Nginx
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            nginx -t
+            systemctl reload nginx
