@@ -1,0 +1,36 @@
+.caseList-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1919px) {
+    .caseList-wrapper {
+        margin-top: 40px;
+        /* justify-content: center; */
+    }
+}
+
+@media screen and (max-width: 1535px) {
+    .caseList-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .caseList-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px)  {
+    .caseList-wrapper {
+        margin-top: 20px;
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}

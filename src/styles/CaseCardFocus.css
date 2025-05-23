@@ -1,0 +1,323 @@
+.CaseCard-modal-layer {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: all ease-in-out 0.1s;
+    /* background: black;
+    opacity: 0.4; */
+}
+.CaseCard-modal-layer.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overflowHidden {overflow: hidden;}
+
+.CaseCard-modal-wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    transition: all ease-in-out 0.1s;
+    
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.CaseCard-modal-wrapper.open {
+    display: flex;
+}
+
+.CaseCard-modal-wrapper-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17.5px;
+    border-radius: 34px;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20.4px;
+    letter-spacing: -2%;
+    cursor: pointer;
+}
+
+.CaseCard-modal-wrapper-closeL {
+    border: 1.5px solid #CED1D4;
+}
+.CaseCard-modal-wrapper-closeL:hover {
+    background: #CED1D4;
+}
+
+.CaseCard-modal-wrapper-closeD {
+    border: 1.5px solid #606164;
+}
+.CaseCard-modal-wrapper-closeD:hover {
+    /* background: #212224; */
+    background: rgba(250, 252, 255, 0.2);
+}
+
+.CaseCard-modal-wrapper-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 705px;
+    margin-top: 200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.caseImg {
+    width: 1200px;
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.CaseCard-modal-wrapper-info h1 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    letter-spacing: 4%;
+
+}
+
+.CaseCard-modal-wrapper-info h2 {
+    text-align: center;
+    width: 619px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24.15px;
+    letter-spacing: 4%;
+}
+
+.CaseCard-modal-wrapper-info a {
+    font-family: "IBM Plex Sans", serif;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24.15px;
+    letter-spacing: 4%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+
+}
+.CaseCard-modal-wrapper-info-aL {
+    color: rgba(41, 44, 50, 0.6);
+}
+.CaseCard-modal-wrapper-info-aD {
+    color: #9EA0A3;
+}
+
+@media screen and (max-width: 1820px) {
+    .CaseCard-modal-wrapper-close {
+        top: 20px;
+        right: 20px;
+        padding: 10px 17.5px;
+    
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20.4px;
+        letter-spacing: -2%;
+    }
+    
+    .CaseCard-modal-wrapper {
+        padding: 0 20px;
+    }
+
+    .CaseCard-modal-wrapper-info {
+        gap: 20px;
+        
+        width: 705px;
+        margin-top: 190px;
+    }
+    
+    .caseImg {
+        width: 966px;
+        margin-top: 24px;
+    }
+    
+    
+    .CaseCard-modal-wrapper-info h1 {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 48px;
+    
+    }
+    
+    .CaseCard-modal-wrapper-info h2 {
+        width: 619px;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 21.85px;
+    }
+    
+    .CaseCard-modal-wrapper-info a {
+        font-family: "IBM Plex Sans", serif;
+    
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 21.85px;
+        letter-spacing: 4%;
+        text-decoration: underline;
+        text-decoration-style: solid;
+    
+    }
+}
+
+@media screen and (max-width: 1535px) {
+    .CaseCard-modal-wrapper-close {
+        top: 20px;
+        right: 20px;
+        padding: 10px 17.5px;
+    
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20.4px;
+        letter-spacing: -2%;
+    }
+    .CaseCard-modal-wrapper {
+        padding: 0 20px;
+    }
+
+    .CaseCard-modal-wrapper-info {
+        gap: 20px;
+        
+        width: 705px;
+        margin-top: 190px;
+    }
+    
+    .caseImg {
+        width: 966px;
+        margin-top: 40px;
+    }
+    
+    
+    .CaseCard-modal-wrapper-info h1 {
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 42px;
+    
+    }
+    
+    .CaseCard-modal-wrapper-info h2 {
+        width: 619px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 19.55px;
+    }
+    
+    .CaseCard-modal-wrapper-info a {
+        font-family: "IBM Plex Sans", serif;
+    
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 19.55px;
+        letter-spacing: 4%;
+        text-decoration: underline;
+        text-decoration-style: solid;
+    
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .CaseCard-modal-wrapper-close {
+        top: 20px;
+        right: 20px;
+        padding: 10px 17.5px;
+    
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20.4px;
+        letter-spacing: -2%;
+    }
+}
+
+@media screen and (max-width: 600px)  {
+    .CaseCard-modal-layer {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        transition: all ease-in-out 0.1s;
+        overflow-y: scroll;
+        
+    }
+    .CaseCard-modal-layer.open {
+        display: block;
+        
+    }
+    
+    .CaseCard-modal-layer-mobile-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 114px;
+        gap: 10px;
+        padding: 0 10px 0 10px;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 0%;
+
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 17.25px;
+        letter-spacing: 0%;
+        width: 340px;
+    }
+
+    .CaseCard-modal-layer-mobile-info a {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 17.25px;
+        letter-spacing: -2%;
+        margin-bottom: 10px;
+    }
+    
+    .CaseCard-modal-layer-mobile-info-img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .CaseCard-modal-layer-mobile-info-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    h2 {
+        width: 340px;
+    }
+}

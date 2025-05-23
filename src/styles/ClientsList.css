@@ -1,0 +1,101 @@
+.clientsList-wrapper {
+    width: fit-content;
+    margin-top: 60px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clientsList-wrapper img {
+    
+}
+
+#gir {
+    width: 170px;
+    height: 68px;
+}
+
+/* .clientL {
+    fill: A6A9AD;
+
+}
+.clientD {
+    fill: 696B6D;
+} */
+
+/* .stk {
+    width: 330px;
+    height: 103px;
+}
+
+.gir {
+    width: 190px;
+    height: 78px;
+}
+
+.aip {
+    width: 294px;
+    height: 52px;
+} */
+
+@media screen and (max-width: 1820px) {
+    .clientsList-wrapper {
+        margin-top: 39px;
+        gap: 50px;
+    }
+    
+    .clientsList-wrapper img {
+        
+    }
+}
+
+@media screen and (max-width: 1535px) {
+    .clientsList-wrapper {
+        margin-top: 40px;
+        gap: 50px;
+    }
+    
+    .clientsList-wrapper img {
+        
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .clientsList-wrapper {
+        margin-top: 40px;
+        gap: 40px;
+    }
+    
+    .clientsList-wrapper img {
+        
+    }
+}
+
+@media screen and (max-width: 600px)  {
+    .clientsList-wrapper {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+        overflow-x: scroll;
+        scrollbar-width: none; /* Для Firefox */
+        -ms-overflow-style: none;
+    }
+    .clientsList-wrapper::-webkit-scrollbar {
+        display: none; /* Для Chrome, Safari и Edge */
+    }
+    
+    .clientsList-wrapper img {
+        height: 30px;
+    }
+    #aip {
+        height: 20px;
+    }
+}

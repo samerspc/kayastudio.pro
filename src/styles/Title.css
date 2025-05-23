@@ -1,0 +1,340 @@
+.title-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background: black; */
+}
+
+.titile-name {
+    width: 100%;
+    height: 964px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.zLm {
+    z-index: 999999999;
+}
+.titile-name p {
+    font-family: AeonikPro300;
+    font-size: 200px;
+    font-weight: 100;
+    line-height: 200px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.titile-nameL1 {
+    color: rgba(41, 44, 50, 1);
+}
+.titile-nameL2 {
+    color: rgba(41, 44, 50, 0.4);
+}
+.titile-nameD1 {
+    color: rgba(250, 252, 255, 1);
+
+}
+.titile-nameD2 {
+    color: rgba(250, 252, 255, 0.4);
+}
+
+.titile-text {
+    width: 100%;
+    height: 88px;
+    position: relative;
+}
+
+.titile-text p , .titile-text a {
+    position: absolute;
+}
+
+#titile-text_1 {
+    width: 500px;
+
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+    left: 0;
+    top: 0;
+}
+
+#titile-text_2 {
+    width: 360px;
+
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22.8px;
+    
+    left: 50%;
+    bottom: 0;
+}
+
+#titile-text_3 {
+    width: auto;
+
+    font-family: "IBM Plex Mono", serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18.7px;
+    letter-spacing: -0.02em;
+    text-align: right;
+
+    text-decoration: none;
+
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+}
+
+.titile-text_3L {
+    color: rgba(41, 44, 50, 0.8);
+    border-bottom: 1px solid rgba(41, 44, 50, 0.8);
+}
+
+.titile-text_3D {
+    color: rgba(250, 252, 255, 0.8);
+    border-bottom: 1px solid rgba(250, 252, 255, 0.8);
+}
+
+@media screen and (max-width: 1820px) {
+    .titile-name {
+        height: 756px;
+    }
+    .titile-name p {
+        font-weight: 300;
+        font-size: 140px;
+        line-height: 140px;
+        letter-spacing: 4%;
+    }
+
+    .titile-text {
+        height: 78px;
+    }
+
+    #titile-text_1 {
+        width: 430px;
+    
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 39.1px;
+        letter-spacing: 0%;
+        
+        left: 0;
+        bottom: 0;
+    }
+
+    #titile-text_2 {
+        width: 350px;
+
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 21.85px;
+        letter-spacing: 0%;
+    }
+
+    #titile-text_3 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -2%;
+        text-align: right;
+    }
+
+}
+
+@media screen and (max-width: 1535px) {
+    .titile-name {
+        height: 724px;
+    }
+    .titile-name p {
+        font-weight: 300;
+        font-size: 140px;
+        line-height: 140px;
+        letter-spacing: 4%;
+    }
+
+    .titile-text {
+        height: 70px;
+    }
+
+    #titile-text_1 {
+        width: 430px;
+    
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 35.2px;
+        letter-spacing: 0%;
+
+        
+        left: 0;
+        bottom: 0;
+    }
+
+    #titile-text_2 {
+        width: 330px;
+
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 19.55px;
+        letter-spacing: 0%;
+
+    }
+
+    #titile-text_3 {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 15px;
+        letter-spacing: -2%;
+        text-align: right;
+
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .titile-name {
+        height: 712px;
+    }
+    .titile-name p {
+        font-weight: 300;
+        font-size: 120px;
+        line-height: 120px;
+        letter-spacing: 4%;
+    }
+
+    .titile-text {
+        height: 62px;
+    }
+
+    #titile-text_1 {
+        width: 430px;
+    
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 30.8px;
+        letter-spacing: 0%;
+        
+        left: 0;
+        bottom: 0;
+    }
+
+    #titile-text_2 {
+        width: 290px;
+
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0%;
+    }
+
+    #titile-text_3 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15.4px;
+        letter-spacing: -2%;
+        text-align: right;
+
+    }
+}
+
+@media screen and (max-width: 600px)  {
+    .title-wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 142px;
+        padding-bottom: 96px;
+    }
+    
+    .titile-text {
+        width: 100%;
+        height: auto;
+        position: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .titile-text p, .titile-text a {
+        position: inherit;
+    }
+    
+    #titile-text_1 {
+        font-family: AeonikPro400;
+        width: 340px;
+    
+        font-weight: 400;
+        font-size: 41px;
+        line-height: 45.1px;
+        letter-spacing: 0%;
+    }
+    
+    #titile-text_2 {
+        font-family: AeonikPro400;
+        width: 320px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20.4px;
+        letter-spacing: 0%;
+    }
+    
+    #titile-text_3 {
+        width: 155px;
+    
+        font-family: "IBM Plex Mono", serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15.4px;
+        letter-spacing: -2%;
+        text-align: left;
+
+    }
+    .titile-mobile-buttons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px
+    }
+    .titile-mobile-button1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
+    }
+    .titile-mobile-button1 a {
+        width: 14px;
+        height: 20px;
+    }
+    .titile-mobile-button1 img {
+        rotate: 180deg;
+    }
+    .titile-mobile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        width: calc(100% - 66px);
+        border-radius: 39px;
+    }
+    .titile-mobile-button2 a {
+        text-decoration: none;   
+    }
+    .aL {
+        color: rgba(41, 44, 50, 1);  
+    }
+    .aD {
+        color: rgba(250, 252, 255, 1);
+    }
+}

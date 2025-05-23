@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body {
+  background: #FAFCFF;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  transition: all ease-in-out 0.1s;
+  overflow-x: hidden;
+}
+
+.bodyL {
+  background: #FAFCFF;
+  color: #292C32;
+}
+
+.bodyD {
+  background: rgba(9, 10, 12, 1);
+  color: rgba(250, 252, 255, 1);
+}
+
+.htmlBgL {
+  background: #FAFCFF;
+}
+
+.htmlBgD {
+  background: rgba(9, 10, 12, 1);
+}
+
+#root {
+  padding: 0 40px;
+  width: 1920px;
+}
+
+.IbmPlexMonoFont {
+  font-family: "IBM Plex Mono", serif;
+}
+
+.textD {
+  color: rgba(250, 252, 255, 1);
+}
+
+.bgD {
+  background: rgba(9, 10, 12, 1);
+}
+.bgL {
+  background: rgba(250, 252, 255, 1);
+}
+
+.brD {
+  border: 1px solid rgba(250, 252, 255, 0.05);
+}
+
+.brL {
+  border: 1px solid #E9E9EA;
+}
+
+.aL {
+  color: rgba(41, 44, 50, 1);
+}
+
+.aD {
+  color: rgba(250, 252, 255, 1);
+}
+    
+
+@media screen and (max-width: 1820px) {
+  #root {
+    width: 1536px;
+    padding: 0 19px;
+  }
+}
+
+@media screen and (max-width: 1535px) {
+  #root {
+    width: 1366px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  #root {
+    width: 1280px;
+    
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  #root {
+    width: 100vw;
+    padding: 0 10px;
+  }
+}

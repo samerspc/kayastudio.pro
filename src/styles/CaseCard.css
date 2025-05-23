@@ -1,0 +1,197 @@
+.CaseCard-wrapper {
+    width: 613px;
+    height: 448px;
+    border-radius: 20px;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
+}
+
+/* .CaseCard-wrapperHoverL:hover {
+    background: rgba(240, 244, 250, 1);
+}
+
+.CaseCard-wrapperHoverD:hover {
+    background: rgba(250, 252, 255, 0.05);
+
+} */
+
+.CaseCard-imgLayer {
+    width: 593px;
+    height: 364px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.CaseCard-imgLayer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CaseCard-name {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.CaseCard-shortDescription {
+    margin-top: 4px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.CaseCard-srtDscpL {
+    color: rgba(41, 44, 50, 0.5);
+}
+.CaseCard-srtDscpD {
+    color: rgba(250, 252, 255, 0.5);
+
+}
+
+@media screen and (max-width: 1919px) {
+    .CaseCard-wrapper {
+        width: 580px;
+        height: 420px;
+    }
+    
+    .CaseCard-imgLayer {
+        width: 560px;
+        height: 342px;
+    }
+}
+
+@media screen and (max-width: 1820px) {
+    .CaseCard-wrapper {
+        width: 499px;
+        height: 391px;
+    }
+    
+    .CaseCard-imgLayer {
+        width: 479px;
+        height: 296px;
+    }
+    
+    .CaseCard-name {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 17px;
+
+    }
+    
+    .CaseCard-shortDescription {
+        width: 300px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 17px;    
+    }
+}
+
+@media screen and (max-width: 1535px) {
+    .CaseCard-wrapper {
+        width: 442px;
+        height: 327px;
+    }
+    
+    .CaseCard-imgLayer {
+        width: 422px;
+        height: 232px;
+    }
+    
+    .CaseCard-name {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 15px;
+    }
+    
+    .CaseCard-shortDescription {
+        width: 400px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 15px;       
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .CaseCard-wrapper {
+        width: 413px;
+        height: 327px;
+    }
+    
+    .CaseCard-imgLayer {
+        width: 393px;
+        height: 232px;
+    }
+    
+    .CaseCard-name {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 15px;        
+    }
+    
+    .CaseCard-shortDescription {
+        width: 300px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 15px;          
+    }
+}
+
+@media screen and (max-width: 600px)  {
+    .CaseCard-wrapper {
+        width: 100%;
+        height: 264px;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        transition: all ease-in-out 0.1s;
+        overflow: hidden;
+    }
+    
+    .CaseCard-imgLayer {
+        width: 100%;
+        height: 208px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+    }
+    .CaseCard-imgLayer img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .CaseCard-name {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    
+    .CaseCard-shortDescription {
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    
+    }
+
+    
+}
