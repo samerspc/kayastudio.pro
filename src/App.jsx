@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 import Title from './blocks/Title'
@@ -31,18 +29,6 @@ function App() {
       document.documentElement.classList.remove("htmlBgD");
     }
   }
-
-  const show = () => {
-    console.log(theme)
-  }
-
-  const clients = [
-    './stk_logo.svg',
-    './client.svg',
-    './client.svg',
-    './client.svg',
-    './client.svg',
-  ]
 
   const cases = [
     {
@@ -97,8 +83,8 @@ function App() {
       <Heading text={'Студия'} count={'3'} id={'studio'} text_2={false} theme={theme}/>
       <Studio theme={theme}/>
       
-      <Heading text={'Партнеры'} count={'3'} id={'clients'} text_2={'Нашим решениям доверяют топовые компании страны'} theme={theme}/>
-      <ClientsList theme={theme}/>
+      {/* <Heading text={'Партнеры'} count={'3'} id={'clients'} text_2={'Нашим решениям доверяют топовые компании страны'} theme={theme}/> */}
+      {/* <ClientsList theme={theme}/> */}
 
       <Heading text={'Проекты'} count={'6'} id={'projects'} text_2={false} theme={theme}/>
       <CaseList cases={cases} theme={theme}></CaseList>
