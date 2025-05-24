@@ -24,6 +24,16 @@ jobs:
           npm audit fix --force
           npm run build
 
+      - name: Clean target directory on server
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            rm -rf /var/www/kayastudio.pro/html/*
+
       - name: Copy build to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -31,7 +41,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}     
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
-          source: "dist/"                      
+          source: "dist/*"
           target: "/var/www/kayastudio.pro/html/"
 
       - name: Reload Nginx
