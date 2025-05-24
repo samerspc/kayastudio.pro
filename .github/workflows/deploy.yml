@@ -33,16 +33,47 @@ jobs:
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
             rm -rf /var/www/kayastudio.pro/html/*
+            mkdir -p /tmp/deploy_staging/
 
-      - name: Copy build to server
+      - name: Copy build to staging on server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}     
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
-          source: "dist/*"
-          target: "/var/www/kayastudio.pro/html/"
+          source: "dist"
+          target: "/tmp/deploy_staging/"
+
+      - name: Move files from staging to target
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            mv /tmp/deploy_staging/dist/* /var/www/kayastudio.pro/html/
+
+      - name: Clean up staging directory
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            rm -rf /tmp/deploy_staging/
+
+      - name: Check deployed files and permissions
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            ls -la /var/www/kayastudio.pro/html/
 
       - name: Reload Nginx
         uses: appleboy/ssh-action@v0.1.6
