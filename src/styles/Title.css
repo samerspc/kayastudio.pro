@@ -1,6 +1,6 @@
 .title-wrapper {
     width: 100%;
-    height: auto;
+    height: calc(100vh - 30px);
     display: flex;
     flex-direction: column;
     /* background: black; */
