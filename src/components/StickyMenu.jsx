@@ -15,6 +15,13 @@ const StickyMenu = ({handleSetTheme, theme}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  function scrollToContacts() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
+
   const handleOpenModal = () => {
     setIsModalOpen(true);
     document.body.classList.add("overflowHidden");
@@ -45,9 +52,15 @@ const StickyMenu = ({handleSetTheme, theme}) => {
           {!isMobile && 
             <>
             <a href="#studio" className={theme ? "nav-item nav-itemL" : "nav-item nav-itemD"}>Студия</a>
-            <a href="#clients" className={theme ? "nav-item nav-itemL" : "nav-item nav-itemD"}>Партнеры</a>
+            {/* <a href="#clients" className={theme ? "nav-item nav-itemL" : "nav-item nav-itemD"}>Партнеры</a> */}
             <a href="#projects" className={theme ? "nav-item nav-itemL" : "nav-item nav-itemD"}>Проекты</a>
-            <a href="#contacts" className={theme ? "nav-item nav-itemL" : "nav-item nav-itemD"}>Контакты</a>
+            <a href="#" className={theme ? "nav-item nav-itemL" : "nav-item nav-itemD"}
+            onClick={e => {
+              e.preventDefault();
+              scrollToContacts();
+            }
+            }
+            >Контакты</a>
             </>
           }
             
@@ -109,7 +122,7 @@ const StickyMenu = ({handleSetTheme, theme}) => {
         </div>
 
         <div className={`modal-links`}>
-          <a href="#clients" onClick={handleCloseModal} className={theme ? 'aL' : 'aD'}>Партнеры</a>
+          {/* <a href="#clients" onClick={handleCloseModal} className={theme ? 'aL' : 'aD'}>Партнеры</a> */}
           <a href="#studio" onClick={handleCloseModal} className={theme ? 'aL' : 'aD'}>Студия</a>
           <a href="#projects" onClick={handleCloseModal} className={theme ? 'aL' : 'aD'}>Проекты</a>
           <a href="#contacts" onClick={handleCloseModal} className={theme ? 'aL' : 'aD'}>Контакты</a>
